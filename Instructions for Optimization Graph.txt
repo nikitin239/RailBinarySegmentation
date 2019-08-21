@@ -1,0 +1,9 @@
+
+
+###Optimize For Inference+Graph Freezing###
+https://github.com/amir-abdi/keras_to_tensorflow
+python3 keras_to_tensorflow.py -input_model_file full_CNN_model.h5
+
+
+##Quantization###
+python3 /home/dnikitin/tensorflow/tensorflow/tools/quantization/quantize_graph.py --input=final.pb --output=eightbit_graph.pb --output_node_names=output/truediv --mode=eightbit 
